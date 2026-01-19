@@ -34,8 +34,7 @@ function startGame() {
         }
 
         // Change the angle of the follow camera
-        cameraAngle += 1;
-        followCamera.rotationOffset = cameraAngle;
+git 
 
         scene.render();
     });

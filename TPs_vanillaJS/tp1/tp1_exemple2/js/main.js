@@ -100,6 +100,16 @@ function createScene() {
     sphereMaterials[9].diffuseTexture = new BABYLON.VideoTexture("video", ["videos/michel.mp4"],scene);
     sphereMaterials[9].diffuseTexture.vScale *= -1;
 
+    let cylinder;
+    let cylinderMaterial
+    cylinder = BABYLON.MeshBuilder.CreateCylinder("myCylinder", {diameter: 2, segments: 32}, scene);
+    cylinder.position.x += 3*10 -9;
+    cylinder.position.y = 2;
+
+    cylinderMaterial = new BABYLON.StandardMaterial("cylinderMaterial", scene);
+    cylinder.material = cylinderMaterial;
+
+    mirrorMaterial.reflectionTexture.renderList.push(cylinder);
 
     let camera = new BABYLON.FreeCamera("myCamera", new BABYLON.Vector3(0, 1, -30), scene);
    // This targets the camera to scene origin
