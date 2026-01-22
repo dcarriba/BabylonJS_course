@@ -34,8 +34,6 @@ function startGame() {
         }
 
         // Change the angle of the follow camera
-git 
-
         scene.render();
     });
 }
